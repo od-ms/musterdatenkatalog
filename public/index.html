@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Musterdatenkatalog Visualisierung</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css" />
+    <script src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
+    <script src="index.js"></script>
+<style>
+    .chart {
+        height: 440px;
+    }
+    .prettyTable {
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .prettyTable td, .prettyTable th {
+        border: 1px solid #ddd;
+        padding: 4px 8px;
+    }
+
+    .prettyTable tr:nth-child(even){background-color: #f2f2f2;}
+
+    .prettyTable tr:hover {background-color: #ddd;}
+
+    .prettyTable th {
+        padding: 8px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .prettyTable div.toggle {
+        max-height:20px;
+        overflow:hidden;
+        cursor:pointer;
+    }
+    .prettyTable div.toggle.open {
+        max-height:none;
+        overflow:visible;
+    }
+    .prettyTable div.toggle i, .prettyTable div.toggle b {
+        font-size: 13px;
+        font-style: normal;
+        background-color: #36c;
+        border-radius: 5px;
+        color: white;
+        padding: 0 3px;
+    }
+    .prettyTable div.toggle b {
+        background-color: #999;
+    }
+    .prettyTable div.toggle a {
+        color:grey;
+    }
+
+</style>
+</head>
+<body class="dx-viewport">
+    <div class="demo-container">
+        <h2>Musterdatenkatalog</h2>
+        <div id="musterdatenkatalog"></div>        
+    </div>
+</body>
+</html>
