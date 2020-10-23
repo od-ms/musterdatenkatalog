@@ -24,7 +24,9 @@
         border: 1px solid #ddd;
         padding: 4px 8px;
     }
-
+    .prettyTable td.gotIt {
+        background-color:#BDDDBF;
+    }
     .prettyTable tr:nth-child(even){background-color: #f2f2f2;}
 
     .prettyTable tr:hover {background-color: #ddd;}
@@ -59,12 +61,25 @@
     .prettyTable div.toggle a {
         color:grey;
     }
+    .anleitung {
+        padding: 5px 10px;
+        background-color: aliceblue;
+        margin-bottom: 4px;
+        border-radius: 10px;
+        font-size: 0.9em;
+    }
 
 </style>
 </head>
 <body class="dx-viewport">
     <div class="demo-container">
-        <h2>Musterdatenkatalog</h2>
+        <h2>Open-Data-Musterdatenkatalog - Auswertung für Münster</h2>
+        <div class="anleitung">
+            <b>Anleitung:</b><br />
+            <i>Blaue Sterne</i> = "Wie viele Städte haben diesen Musterdatensatz?" - Sterne anklicken um die Datensätze der Städte anzuzeigen.<br />
+            <i>Grün hinterlegte Zellen</i> = Diese Datensätze sind bei der aktuell betrachteten Stadt (Münster) vorhanden.<br />
+            <i>"Quelle(n)</i> = Die Datenbereitsteller bzw Ämter der Stadt Münster, aus denen den Daten veröffentlicht wurden.<br />        
+        </div>
         <div id="musterdatenkatalog"></div>        
     </div>
 </body>
