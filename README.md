@@ -9,7 +9,7 @@ Dieses Repository enthält
 
 ## Wie startet man es?
 
-Demo: Auf folgende URL klicken. TBD, hier muss noch die Github Pages Url hin.
+Demo: https://od-ms.github.io/musterdatenkatalog/public/index.html
 
 
 ## Wie aktualisiert man es?
