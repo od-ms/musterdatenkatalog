@@ -19,12 +19,14 @@
         border-collapse: collapse;
         width: 100%;
     }
-
     .prettyTable td, .prettyTable th {
         border: 1px solid #ddd;
         padding: 4px 8px;
     }
-    .prettyTable td.gotIt {
+    .prettyTable tr.theme {
+        background-color: #BEC8BE;
+    }
+    .prettyTable tr.gotIt td {
         background-color:#BDDDBF;
     }
     .prettyTable tr:nth-child(even){background-color: #f2f2f2;}
@@ -68,6 +70,8 @@
         border-radius: 10px;
         font-size: 0.9em;
     }
+    .prettyTable tbody tr td.highlight {background-color:yellow;}
+    .prettyTable tr td.no_padding {padding:0}
 
 </style>
 </head>

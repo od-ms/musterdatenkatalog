@@ -32,11 +32,12 @@ function showMusterdatenkatalog() {
         /**
          * Print Musterdatenkatalog HTML table - one nasty loop does it all (O_o)
          */
-        var $table = $('<table class="prettyTable"/>');
-        $table.append( '<tr><th>Thema</th><th>Bereich</th><th>Datensätze</th><th>Quelle(n)</th></tr>' );
+        var $table = $('<table id="m_table" class="prettyTable"/>');
+        $table.append( '<tr class="head"><th>Musterkat.-Thema</th><th>Musterkat.-Bereich</th><th>Städte mit Datensätzen</th><th id="m_filter">Datenquelle(n) in Münster</th></tr>' );
         Object.entries(table).forEach(([topic, subtopics]) => {
             const colspan = Object.keys(subtopics).length +1;
-            $table.append('<tr><td rowspan="'+colspan+'">' + topic + '</td>');
+            $body = $('<tbody>');
+            $body.append('<tr class="theme"><td rowspan="'+colspan+'">' + topic + '</td><td class="no_padding" colspan="3"></td></tr>');
             var counter = 0;
 
             Object.entries(subtopics).forEach(([subtopic, cities]) => {
@@ -51,27 +52,30 @@ function showMusterdatenkatalog() {
 
                 // Display the departments of Münster (if we have a matching dataset)
                 const taxonomy = topic + ' - ' + subtopic;
+                var active_departments = [];
                 var our_city_html = '';
                 if (city_data[taxonomy]) {
                     var our_city_datasets = '';
                     Object.entries(city_data[taxonomy]).forEach(([department, datasets]) => {     
-                        our_city_html += department;
+                        active_departments.push(department);
                         datasets.forEach(function(dataset){
                             our_city_datasets += '<br /><b>&gt;</b> <a target="_blank" href="' + city_open_data_prefix + dataset + '">' + dataset + '</a>';
                         });
                     });
-                    our_city_html += our_city_datasets;
+                    our_city_html += active_departments.join(', ') + our_city_datasets;
                 }
 
                 // Now render the table row
                 const tdClass =(our_city_html? ' class="gotIt"' : '');
-                $table.append( ((counter++==0)?'':'<tr>')
-                    + '<td' + tdClass +  '>' + subtopic + '</td>'
-                    + '<td' + tdClass +  '><div class="toggle">' 
+//                $table.append( ((counter++==0)?'':'<tr class="ok">')
+                $body.append('<tr'+tdClass+'>'
+                    + '<td>' + subtopic + '</td>'
+                    + '<td><div class="toggle">' 
                         + (number_of_cities>1? '<i>' + '✪'.repeat(number_of_cities) + '</i><br />' : '')
                         + citylist_html + '</div></td>' 
-                    + '<td' + tdClass +  '><div class="toggle">'+our_city_html+'</div></td></tr>');
+                    + '<td class="amt"><div class="toggle">' + our_city_html + '</div></td></tr>');
             });
+            $table.append($body);            
         });
         $('#musterdatenkatalog').append($table);
 
@@ -79,6 +83,34 @@ function showMusterdatenkatalog() {
         $('.prettyTable div.toggle').click(function(e) {
             $(this).toggleClass('open');
         })
+
+        /* 
+         * "filter"-feature for last table column
+         */
+        $.getJSON('city_aemter.json', function(aemter) { 
+            console.log("Aemter file load successful.");
+            var $select = $('<select id="filter" />');
+            const empty_option = ' - Alle Ämter anzeigen - ';
+            $select.append('<option value="">' + empty_option + '</option>');
+            Object.entries(aemter).forEach(([key, value]) => {
+                $select.append('<option value="' + value['amt'] + '">' + value['dez'] + ' - ' + value['id'] + ' ' + value['amt'] + '</option>');
+            });
+            $('#m_filter').append('<br />').append($select);
+            $('#filter').on('change', function() {
+                var amt = $(this).val();
+                console.log("selected amt", amt);
+                $('#m_table tbody').hide();
+                $('#m_table tr td.amt').removeClass('highlight');
+                $('#m_table tr td.amt').each(function() {
+                    if ((!amt) || ($(this).text().includes(amt))) {
+                        $(this).parent().parent().show(); // show surrounding tbody
+                        if (amt) {
+                            $(this).addClass('highlight');
+                        }
+                    } 
+                });
+            });
+        });
     }); 
 }
 
