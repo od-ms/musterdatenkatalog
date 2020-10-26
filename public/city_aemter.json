@@ -1,0 +1,177 @@
+[
+  {
+    "id": "13",
+    "amt": "Presseamt",
+    "dez": "OB"
+  },
+  {
+    "id": "14",
+    "amt": "Amt f. Wirtschaftlichkeitsprüfung",
+    "dez": "OB"
+  },
+  {
+    "id": "16",
+    "amt": "Justiziariat Verwaltungsführung",
+    "dez": "OB"
+  },
+  {
+    "id": "17",
+    "amt": "Amt für Gleichstellung",
+    "dez": "OB"
+  },
+  {
+    "id": "10",
+    "amt": "Personal- und Organisationsamt",
+    "dez": "I"
+  },
+  {
+    "id": "32",
+    "amt": "Ordnungsamt",
+    "dez": "I"
+  },
+  {
+    "id": "33",
+    "amt": "Amt für Bürger- und Ratsservice",
+    "dez": "I"
+  },
+  {
+    "id": "37",
+    "amt": "Feuerwehr",
+    "dez": "I"
+  },
+  {
+    "id": "18",
+    "amt": "citeq",
+    "dez": "I"
+  },
+  {
+    "id": "20",
+    "amt": "Amt für Finanzen und Beteiligungen",
+    "dez": "II"
+  },
+  {
+    "id": "36",
+    "amt": "Rechts- und Ausländeramt",
+    "dez": "II"
+  },
+  {
+    "id": "61",
+    "amt": "Stadtplanung",
+    "dez": "III"
+  },
+  {
+    "id": "62",
+    "amt": "Katasteramt",
+    "dez": "III"
+  },
+  {
+    "id": "63",
+    "amt": "Bauordungsamt",
+    "dez": "III"
+  },
+  {
+    "id": "66",
+    "amt": "Amt für Mobilität und Tiefbau",
+    "dez": "III"
+  },
+  {
+    "id": "80",
+    "amt": "Münster Marketing",
+    "dez": "III"
+  },
+  {
+    "id": "40",
+    "amt": "Schule und Weiterbildung",
+    "dez": "IV"
+  },
+  {
+    "id": "441",
+    "amt": "Kommunales Integrationszentrum",
+    "dez": "IV"
+  },
+  {
+    "id": "41",
+    "amt": "Kulturamt",
+    "dez": "V"
+  },
+  {
+    "id": "42",
+    "amt": "Stadtbücherei",
+    "dez": "V"
+  },
+  {
+    "id": "44",
+    "amt": "Musikschule",
+    "dez": "V"
+  },
+  {
+    "id": "45",
+    "amt": "Stadtmuseum",
+    "dez": "V"
+  },
+  {
+    "id": "47",
+    "amt": "Stadtarchiv",
+    "dez": "V"
+  },
+  {
+    "id": "50",
+    "amt": "Sozialamt",
+    "dez": "V"
+  },
+  {
+    "id": "51",
+    "amt": "Kinder, Jugendliche und Familien",
+    "dez": "IV"
+  },
+  {
+    "id": "52",
+    "amt": "Sportamt",
+    "dez": "IV"
+  },
+  {
+    "id": "53",
+    "amt": "Gesundheits- und Veterinäramt",
+    "dez": "V"
+  },
+  {
+    "id": "59",
+    "amt": "Jobcenter Münster",
+    "dez": "V"
+  },
+  {
+    "id": "46",
+    "amt": "Theater Münster",
+    "dez": "V"
+  },
+  {
+    "id": "991",
+    "amt": "Geschäftsstelle d. komm. Stiftungen",
+    "dez": "V"
+  },
+  {
+    "id": "992",
+    "amt": "Villa ten Hompel",
+    "dez": "V"
+  },
+  {
+    "id": "23",
+    "amt": "Immobilienmanagement",
+    "dez": "VI"
+  },
+  {
+    "id": "64",
+    "amt": "Wohnungswesen und Quartiersentw.",
+    "dez": "VI"
+  },
+  {
+    "id": "67",
+    "amt": "Grünflächen",
+    "dez": "VI"
+  },
+  {
+    "id": "70",
+    "amt": "AWM",
+    "dez": "VI"
+  }
+]
