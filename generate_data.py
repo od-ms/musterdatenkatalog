@@ -9,8 +9,8 @@ class MusterdatenkatalogAnalyzer:
     """ Read only the values that we need from Musterdatenkatalog and save them into a json file """
 
     # Config values
-    katalog_url = 'https://www.bertelsmann-stiftung.de/fileadmin/files/musterdatenkatalog/NRW_-_Musterdatensa__tze_V2.1.csv'
-    katalog_tempfile = 'data/NRW_-_Musterdatensaetze_V2.1.csv'
+    katalog_url = 'https://www.bertelsmann-stiftung.de/fileadmin/files/musterdatenkatalog/musterdatenkatalog_deutschland_1.0.csv'
+    katalog_tempfile = 'data/musterdatenkatalog_deutschland_1.0.csv'
     katalog_json = 'public/musterdatenkatalog.json'
 
     def __init__(self):
