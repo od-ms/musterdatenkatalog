@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Open Website",
+            "type": "pwa-chrome",
+            "request": "launch",
+            "file": "public/index.html"
+        },
+        {
+            "name": "Parse Musterdatenkatalog DE",
+            "type": "python",
+            "request": "launch",
+            "program": "generate_data.py",
+            "console": "integratedTerminal"
+        }
+    ]
+}
