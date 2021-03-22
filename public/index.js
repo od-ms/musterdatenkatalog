@@ -9,7 +9,7 @@ var city_data = {};
 
 function showMusterdatenkatalog() {
 
-    $.getJSON('musterdatenkatalog.json', function(musterkatalog) { 
+    $.getJSON('musterdatenkatalog10.json', function(musterkatalog) {
 
         // Aggregate data into a better structure to print the HTML table based on "Thema"
         var table = {};
@@ -56,7 +56,7 @@ function showMusterdatenkatalog() {
                 var our_city_html = '';
                 if (city_data[taxonomy]) {
                     var our_city_datasets = '';
-                    Object.entries(city_data[taxonomy]).forEach(([department, datasets]) => {     
+                    Object.entries(city_data[taxonomy]).forEach(([department, datasets]) => {
                         active_departments.push(department);
                         datasets.forEach(function(dataset){
                             our_city_datasets += '<br /><b>&gt;</b> <a target="_blank" href="' + city_open_data_prefix + dataset + '">' + dataset + '</a>';
@@ -70,12 +70,12 @@ function showMusterdatenkatalog() {
 //                $table.append( ((counter++==0)?'':'<tr class="ok">')
                 $body.append('<tr'+tdClass+'>'
                     + '<td>' + subtopic + '</td>'
-                    + '<td><div class="toggle">' 
+                    + '<td><div class="toggle">'
                         + (number_of_cities>1? '<i>' + '✪'.repeat(number_of_cities) + '</i><br />' : '')
-                        + citylist_html + '</div></td>' 
+                        + citylist_html + '</div></td>'
                     + '<td class="amt"><div class="toggle">' + our_city_html + '</div></td></tr>');
             });
-            $table.append($body);            
+            $table.append($body);
         });
         $('#musterdatenkatalog').append($table);
 
@@ -84,10 +84,10 @@ function showMusterdatenkatalog() {
             $(this).toggleClass('open');
         })
 
-        /* 
+        /*
          * "filter"-feature for last table column
          */
-        $.getJSON('city_aemter.json', function(aemter) { 
+        $.getJSON('city_aemter.json', function(aemter) {
             console.log("Aemter file load successful.");
             var $select = $('<select id="filter" />');
             const empty_option = ' - Alle Ämter anzeigen - ';
@@ -107,19 +107,19 @@ function showMusterdatenkatalog() {
                         if (amt) {
                             $(this).addClass('highlight');
                         }
-                    } 
+                    }
                 });
             });
         });
-    }); 
+    });
 }
 
 
 $(function(){
     /**
      * Try to load city data and convert it to dictionary
-     * 
-     * input format: 
+     *
+     * input format:
         cat: 	"Wahlen - Kommunalwahl"
         org: 	"Amt für Bürger- und Ratsservice"
         name:	"kommunalwahl-münster-2020-stichwahl-des-oberbürgermeisters"
@@ -147,7 +147,7 @@ $(function(){
                     city_data[taxonomy][org] = [];
                 }
                 city_data[taxonomy][org].push(dataset);
-            });            
+            });
 
             console.log("Got city data", city_data);
             showMusterdatenkatalog();
