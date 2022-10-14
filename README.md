@@ -18,3 +18,7 @@ Demo: https://od-ms.github.io/musterdatenkatalog/public/index.html
 2. Update *data/dkan_resources_2020-10.csv*, the file that should contain the datasets of your city. 
 3. Run *generate_city_data.py* to convert your CSV city data to JSON.
 4. Open the file *public/index.html* in your browser.
+
+## Links
+
+* Anleitung, wie man den Musterdatenkatalog mit DCAT-AP nutzt: https://open-north.de/blog/2022-08-31_musterdatenkatalog/
